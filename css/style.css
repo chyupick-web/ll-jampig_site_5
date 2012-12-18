@@ -178,13 +178,23 @@ p.larger {
 
 #footer {
   width: 100%;
-  margin: 100px auto 10px;
+  margin: 130px auto 10px;
   text-align: center;
 }
 
 #footer div {
   display: inline-block;
   padding: 0 25px;
+}
+
+#twitterFooter {
+   position: relative;
+   top: 5px;	
+}
+
+#googleFooter {
+   position: relative;
+   top: 5px;
 }
 
 .container_12 {
