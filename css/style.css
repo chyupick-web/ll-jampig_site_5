@@ -26,7 +26,8 @@ p.large {
 }
 
 p.larger {
-  font-size: 1.4em;
+  color: #777;
+  font-size: 1.5em;
 }
 
 .ribbon {
@@ -53,23 +54,56 @@ p.larger {
 
 .box legend {
   color: #777;
-  font-size: 1.25em;
+  font-size: 1.5em;
   margin-left: 1m;
   padding: 0.2em 0.8em;
 }
 
 .box fieldset {
   background-color: white;
-  border: 1px #D3D3D3 solid;
+  border: 1px #c1c1c1 solid;
   border-radius: 4px;
-  box-shadow: 0 5px 5px -5px #888;
   padding: 0.2em 0.8em;
 }
 
-.featured legend {
-  font-size: 1.75em;
-  margin-left: 1em;
-  padding: 0.2em 0.8em;
+.featured {
+  vertical-align: middle;
+  height: 150px;
+}
+.featured h2 {
+  padding-top: 40px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.featuredbox {
+  border: 1px #c1c1c1 solid;
+  border-radius: 4px;
+  background: white;
+}
+
+.bigexample {
+  padding: 10px 25px;
+  background: url(../img/firepano_logo.png) no-repeat 20px 10px;
+  padding-left: 100px;
+}
+
+.bigicon img {
+  float: left;
+  width: 60px;
+  height: 60px;
+  padding-right: 30px;
+}
+
+.bigdescription h2 {
+  padding: 0;
+  margin: 0;
+}
+
+.bigdescription p {
+  font-size: 1.2em;
+  padding: 0;
+  margin: 0;
 }
 
 .content {
@@ -87,11 +121,6 @@ p.larger {
 .example {
   padding-bottom: 40px;
   height: 40px;
-}
-
-.bigexample {
-  padding: 10px;
-  height: 80px;
 }
 
 .icon {
@@ -112,11 +141,6 @@ p.larger {
   height: 80px;
 }
 
-.bigicon img {
-  width: 60px;
-  height: 60px;
-}
-
 .description {
   float: left;
   height: 40px;
@@ -129,15 +153,6 @@ p.larger {
 
 .description p {
   width: 300px;
-}
-
-.bigdescription {
-  float: left;
-  height: 80px;
-}
-
-.bigdescription h2 {
-  margin: 0px;
 }
 
 .message {
@@ -157,7 +172,9 @@ p.larger {
 
 .footer {
   width: 960px;
+  margin-top: 50px;
   margin-left: 250px;
+  margin-bottom: 20px;
 }
 
 .footer div {
@@ -170,6 +187,7 @@ p.larger {
 }
 
 .container_12 {
+  padding-top: 30px;
   margin-bottom: 20px;
 }
 
