@@ -45,11 +45,12 @@ p.larger {
   font-family: 'Proxima Nova Bold', Arial, Helvetica, sans-serif;
 }
 
-.header img {
+#logoLink {
   padding: 30px;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
+  width: 273px;
+  height: 75px;
 }
 
 .box legend {
