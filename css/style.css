@@ -1,7 +1,6 @@
 body {
   color: #444;
   height: auto;
-  padding-bottom: 20px;
   background-image: url(../img/bg.png);
   background-repeat: repeat;
   font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
@@ -30,8 +29,15 @@ p.larger {
   font-size: 1.4em;
 }
 
-.header {
-  background: url(../img/header_strip.png) top no-repeat;
+.ribbon {
+  height: 10px;
+  width: 100%;
+  background: #ffe173 url(../img/header_strip.png) no-repeat top center;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 0;
 }
 
 .bold {
