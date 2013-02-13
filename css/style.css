@@ -122,6 +122,7 @@ p.larger {
   background: url(../img/gist_icon.png) center left no-repeat;
   padding-top: 5px;
   padding-left: 20px;
+  margin-left: 0px;
 }
 
 .example {
@@ -174,6 +175,15 @@ p.larger {
 }
 .center {
   text-align: center;
+}
+
+#repository-list {
+  min-height: 70px;
+}
+
+#repository-list li {
+  padding-bottom: 10px;
+  margin-left: 0px;
 }
 
 #footer {

@@ -143,7 +143,20 @@
       </fieldset>
     </div>
   </div>
-
+  <div class="grid_6">
+    <br/>
+    <div class="box">
+      <fieldset>
+        <legend class="bold">Repositories</legend>
+        <div class="content">
+          <p>
+            A comprehensive list of all our repositories.
+          </p>
+          <div id="repository-list"></div>
+        </div>
+      </fieldset>
+    </div>
+  </div>
   <div class="clear"></div>
   <div class="grid_12">
     <img src="img/hr.png"></img>
@@ -220,6 +233,33 @@
   })();
 </script>
 
+<!-- Fetch respositories -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/spin.js/1.2.7/spin.min.js"></script>
+<script type="text/javascript">
+  var fixedRepos = [
+    "backfire", "firefeed", "firetube", "firepano", "firetodo", "firebin"
+  ];
+  $(function() {
+    var spinner = new Spinner().spin($("#repository-list").get(0));
+    $.ajax({
+      url: "https://api.github.com/orgs/firebase/repos",
+      success: function(data) {
+        spinner.stop();
+        var list = $("<ul>");
+        for (var i = 0; i < data.length; i++) {
+          var repo = data[i];
+          if (!repo.fork && fixedRepos.indexOf(repo.name) == -1) {
+            var link = "<a href='" + repo.html_url + "'>" + repo.name + "</a>";
+            var desc = "<br/>" + repo.description;
+            list.append($("<li>").html(link + desc));
+          }
+        }
+        $("#repository-list").html(list);
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
