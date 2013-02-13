@@ -247,16 +247,16 @@
       success: function(data) {
         spinner.stop();
         var list = $("<ul>");
-        for (var i = 0; i < data.length; i++) {
-          var repo = data[i];
+        $("#repository-list").append(list);
+        data.map(function(repo) {
           if (!repo.fork && fixedRepos.indexOf(repo.name) == -1) {
             var link = "<a href='" + repo.html_url + "'>" + repo.name + "</a>";
             var desc = "<br/>" + repo.description;
             list.append($("<li>").html(link + desc));
           }
-        }
-        $("#repository-list").html(list);
-      }
+        });
+      },
+      dataType: "json"
     });
   });
 </script>
